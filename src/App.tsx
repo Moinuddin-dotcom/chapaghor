@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react'
-import { Search, ShoppingCart, User } from 'lucide-react'
+import { Search, ShoppingCart, User, Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -341,9 +341,98 @@ export default function App() {
         </section>
       </main>
 
-      <footer className="bg-secondary border-t border-border/50 py-12">
-        <div className="container text-center text-muted-foreground">
-          <p>&copy; 2026 ChapaGhor. All rights reserved.</p>
+      <footer className="bg-[#012622] text-white pt-16 pb-8 border-t-4 border-primary mt-20">
+        <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* Brand Column */}
+          <div className="flex flex-col gap-4">
+            <a href="/" className="flex items-center gap-2 mb-2">
+              <div className="bg-primary p-2 rounded-lg">
+                <img src={imgPaths.logo} alt="ChapaGhor" className="h-8 w-8 object-contain brightness-0 invert" />
+              </div>
+              <span className="font-bold text-2xl tracking-tight text-white">ChapaGhor</span>
+            </a>
+            <p className="text-white/70 text-sm leading-relaxed">
+              Your one-stop destination for premium custom printing and e-commerce solutions. High quality, fast delivery, and absolute perfection.
+            </p>
+            <div className="flex items-center gap-4 mt-4">
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-bold text-lg mb-6 text-white">Quick Links</h3>
+            <ul className="flex flex-col gap-3">
+              <li><a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">About Us</a></li>
+              <li><a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Shop Products</a></li>
+              <li><a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Our Services</a></li>
+              <li><a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Pricing Plans</a></li>
+              <li><a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Contact Us</a></li>
+            </ul>
+          </div>
+
+          {/* Customer Service */}
+          <div>
+            <h3 className="font-bold text-lg mb-6 text-white">Customer Service</h3>
+            <ul className="flex flex-col gap-3">
+              <li><a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Track Your Order</a></li>
+              <li><a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Shipping & Returns</a></li>
+              <li><a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Frequently Asked Questions</a></li>
+              <li><a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Privacy Policy</a></li>
+              <li><a href="#" className="text-white/70 hover:text-primary transition-colors text-sm">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="font-bold text-lg mb-6 text-white">Contact Info</h3>
+            <ul className="flex flex-col gap-4">
+              <li className="flex items-start gap-3 text-white/70 text-sm">
+                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <span>123 Printing Avenue, Design District, NY 10001, USA</span>
+              </li>
+              <li className="flex items-center gap-3 text-white/70 text-sm">
+                <Phone className="w-5 h-5 text-primary shrink-0" />
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li className="flex items-center gap-3 text-white/70 text-sm">
+                <Mail className="w-5 h-5 text-primary shrink-0" />
+                <span>support@chapaghor.com</span>
+              </li>
+            </ul>
+            
+            <div className="mt-6">
+              <h4 className="font-semibold text-sm mb-3 text-white">Subscribe to our newsletter</h4>
+              <div className="flex">
+                <input type="email" placeholder="Email address" className="bg-white/10 border-0 rounded-l-md px-4 py-2 w-full text-sm focus:outline-none focus:ring-1 focus:ring-primary text-white placeholder:text-white/40" />
+                <button className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-r-md text-sm font-semibold transition-colors">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div className="container">
+          <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            <p className="text-white/50 text-sm">&copy; 2026 ChapaGhor. All rights reserved.</p>
+            <div className="flex items-center gap-4">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" alt="Mastercard" className="h-6 opacity-50 hover:opacity-100 transition-opacity bg-white p-1 rounded" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" alt="Visa" className="h-6 opacity-50 hover:opacity-100 transition-opacity bg-white p-1 rounded" />
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/2560px-PayPal.svg.png" alt="PayPal" className="h-6 opacity-50 hover:opacity-100 transition-opacity bg-white p-1 rounded" />
+            </div>
+          </div>
         </div>
       </footer>
     </div>
